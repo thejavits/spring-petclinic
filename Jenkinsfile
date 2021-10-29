@@ -11,16 +11,16 @@ pipeline {
             }
         }
 
-//         stage ('Unit tests') {
-//             steps {
-//               sh './mvnw test'
-//             }
-//             post {
-//                 success {
-//                     junit 'target/surefire-reports/**/*.xml'
-//                 }
-//             }
-//         }
+         stage ('Unit tests') {
+            steps {
+               sh './mvnw test'
+             }
+             post {
+                success {
+                     junit 'target/surefire-reports/**/*.xml'
+                 }
+             }
+        }
 
         stage ('Package') {
             steps {
