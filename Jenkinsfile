@@ -9,11 +9,6 @@ pipeline {
             steps {
               sh './mvnw clean package -DskipTests=true'
             }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml'
-                }
-            }
         }
 
         stage ('Unit tests') {
