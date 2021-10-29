@@ -29,5 +29,10 @@ pipeline {
               //sh "./run.sh"
             }
         }
+        stage ('Run') {
+            steps {
+              sh "./run.sh"
+            }
+        }
     }
 }
