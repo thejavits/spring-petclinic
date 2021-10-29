@@ -24,9 +24,9 @@ pipeline {
 
         stage ('Package') {
             steps {
-              sh "docker login -u $ARTIFACTORY_CREDS_USR -p $ARTIFACTORY_CREDS_PSW  krishnademo.jfrog.io"
-              sh "docker build . -t $DOCKER_IMAGE_NAME && docker push $DOCKER_IMAGE_NAME"
-              sh "./run.sh"
+              sh "/usr/local/bin/docker login -u $ARTIFACTORY_CREDS_USR -p $ARTIFACTORY_CREDS_PSW  krishnademo.jfrog.io"
+              sh "/usr/local/bin/docker build . -t $DOCKER_IMAGE_NAME && docker push $DOCKER_IMAGE_NAME"
+              //sh "./run.sh"
             }
         }
     }
