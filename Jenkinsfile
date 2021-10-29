@@ -31,6 +31,7 @@ pipeline {
         }
         stage ('Run') {
             steps {
+              sh "chmod 755 run.sh"
               sh "./run.sh"
             }
         }
