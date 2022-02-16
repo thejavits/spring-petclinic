@@ -1,3 +1,3 @@
 spring_example:
-  gitProvider: spring_example
-  path: thejavits/spring-petclinic
+  gitProvider: 'spring_example'
+  path: 'thejavits/spring-petclinic'
