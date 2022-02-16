@@ -1,0 +1,7 @@
+GitRepo:                                            # Required.
+  name: springGitRepo                                  # Name of the GitRepo resource. Defaults to GitRepoRes.
+  gitProvider: github                               # Required. Name of the SCM integration which will be used to fetch the SCM. repository.
+  path: thejavits/spring-petclinic        # Required. Path to the SCM repository.
+  branches:
+    exclude: 'demo'                               # Regex pattern to exclude branches.
+    include: ^{{gitBranch}}$  
