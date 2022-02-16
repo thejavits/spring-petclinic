@@ -1,17 +1,16 @@
 template: true   # required for local templates
-valuesFilePath: ./values.yml
  
 resources:
   - name: myFirstRepo
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
-      gitProvider: {{ .Values.myRepo.gitProvider }} # this will be replaced from values.yml
+      gitProvider: github
       # Repository path, including org name/repo name
-      path: {{ .Values.myRepo.path }} # this will be replaced from values.yml
+      path: thejavits/spring-petclinic # this will be replaced from values.yml
       branches:
         # Specifies which branches will trigger dependent steps
-        include: master
+        include: demo
  
   - name: myPropertyBag
     type: PropertyBag
